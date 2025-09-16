@@ -7,11 +7,26 @@
     {
         "id_number": 2,
         "task": "drive",
-        "status": "to do"
+        "status": "done"
     },
     {
         "id_number": 3,
         "task": "code",
+        "status": "to do"
+    },
+    {
+        "id_number": 4,
+        "task": "cook",
+        "status": "done"
+    },
+    {
+        "id_number": 5,
+        "task": "learn",
+        "status": "done"
+    },
+    {
+        "id_number": 6,
+        "task": "write",
         "status": "to do"
     }
 ]

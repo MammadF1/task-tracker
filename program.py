@@ -28,8 +28,10 @@ def list_tasks():
     try:
         with open("tasks.json", "r") as file:
             tasks = json.load(file)
+            print("\n")
             for task in tasks:
-                print("" + task["task"] + " : " + task["status"])
+                print(f"{task['id_number']}. {task['task']} : {task['status']}")
+            print("\n")
     except Exception as e:
         print("No tasks found.")
     
@@ -77,6 +79,6 @@ while option != "4":
     if option == "2":
         list_tasks()
     if option == "3":
-        task_id = int(input("Enter task ID to update: "))
-        update_task(task_id)
-        print(f"Task {task_id} was marked as done!")
+        update_id = int(input("Enter task ID to update: "))
+        update_task(update_id)
+        print(f"Task {update_id} was marked as done!")
