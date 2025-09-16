@@ -1,0 +1,17 @@
+[
+    {
+        "id_number": 1,
+        "task": "clean",
+        "status": "to do"
+    },
+    {
+        "id_number": 2,
+        "task": "drive",
+        "status": "to do"
+    },
+    {
+        "id_number": 3,
+        "task": "code",
+        "status": "to do"
+    }
+]

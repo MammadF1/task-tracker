@@ -38,7 +38,7 @@ def update_task(id_num):
         with open("tasks.json", "r") as file:
             tasks = json.load(file)
             for task in tasks:
-                if task["id"] == id:
+                if task["id_number"] == id_num:
                     task["status"] = "done"
                     break
         with open("tasks.json", "w") as file:
