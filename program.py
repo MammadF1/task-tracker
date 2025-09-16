@@ -5,7 +5,7 @@ def task_id():
         with open("tasks.json", "r") as file:
             tasks = json.load(file)
             if tasks:
-                return max(item["id"] for item in tasks) + 1
+                return max(item["id_number"] for item in tasks) + 1
             return 1
     except Exception as e:
         return 1
@@ -18,7 +18,7 @@ def add_task(task):
                 tasks = json.load(file)
         except (FileNotFoundError, json.JSONDecodeError):
             tasks = []
-        tasks.append({"id": task_id(), "task": task, "status": "to do"})
+        tasks.append({"id_number": task_id(), "task": task, "status": "to do"})
         with open("tasks.json", "w") as file:
             json.dump(tasks, file, indent=4)
     except Exception as e:
@@ -30,10 +30,12 @@ def list_tasks():
             tasks = json.load(file)
             for task in tasks:
                 print("" + task["task"] + " : " + task["status"])
+            if not tasks:
+                print("No tasks found.")
     except Exception as e:
         print("Error listing tasks:", e)
     
-def update_task(id):
+def update_task(id_num):
     try:
         with open("tasks.json", "r") as file:
             tasks = json.load(file)
