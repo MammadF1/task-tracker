@@ -12,7 +12,7 @@
     {
         "id_number": 3,
         "task": "code",
-        "status": "to do"
+        "status": "in progress"
     },
     {
         "id_number": 4,
@@ -23,10 +23,5 @@
         "id_number": 5,
         "task": "learn",
         "status": "done"
-    },
-    {
-        "id_number": 6,
-        "task": "write",
-        "status": "to do"
     }
 ]
