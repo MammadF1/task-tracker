@@ -30,10 +30,8 @@ def list_tasks():
             tasks = json.load(file)
             for task in tasks:
                 print("" + task["task"] + " : " + task["status"])
-            if not tasks:
-                print("No tasks found.")
     except Exception as e:
-        print("Error listing tasks:", e)
+        print("No tasks found.")
     
 def update_task(id_num):
     try:
@@ -50,14 +48,15 @@ def update_task(id_num):
 
 
 
-
-print("1. Add Task")
-print("2. List Tasks")
-print("3. Update Task")
-print("4. Exit")
 option = 0
 
 while option != "4":
+
+    print("1. Add Task")
+    print("2. List Tasks")
+    print("3. Update Task")
+    print("4. Exit")
+
     option = input("select an option:")
     if option == "4":
         print("Exiting...")
